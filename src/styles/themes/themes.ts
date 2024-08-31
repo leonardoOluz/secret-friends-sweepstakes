@@ -4,6 +4,7 @@ const thema = {
     preto: "#000000",
     laranja: "#FE652B",
     creme: "#FFF9EB",
+    cinzaEscuro: "#444444",
     cinza: "#C4C4C4",
     branco: "#FFFFFF",
   },

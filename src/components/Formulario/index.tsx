@@ -1,22 +1,22 @@
-import { ContainerDoPlay, FormAdicionarNomes, SecaoDoFormulario } from "./styles";
+import ContainerPlay from "./ContainerPlay";
+import ListaAdicionada from "./ListaAdicionada";
+import { ContainerForm, FormAdicionarNomes } from "./styles";
 
 const Formulario = () => {
-    return (<SecaoDoFormulario>
-        <h2>Vamos começar!</h2>
-        <FormAdicionarNomes>
-            <div>
-                <input type="text" placeholder="Insira os nomes dos participantes" />
-                <button disabled={true}>Adicionar</button>
-            </div>
-        </FormAdicionarNomes>
-        <ul>
-            <li>Leo</li>
-        </ul>
-        <ContainerDoPlay>
-            <button disabled={false}>Iniciar brincadeira!</button>
-            <img src="./image/sacolas.png" />
-        </ContainerDoPlay>
-    </SecaoDoFormulario>)
+  return (
+    <FormAdicionarNomes>
+      <ContainerForm>
+        <input type="text" placeholder="Insira os nomes dos participantes" />
+        <button disabled={true}>Adicionar</button>
+      </ContainerForm>
+      <ul>
+        <ListaAdicionada nome="Leo"/>
+        <ListaAdicionada nome="Ana"/>
+        <ListaAdicionada nome="Lucca"/>
+      </ul>
+      <ContainerPlay/>
+    </FormAdicionarNomes>
+  )
 };
 
 export default Formulario;

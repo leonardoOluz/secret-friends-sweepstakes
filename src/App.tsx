@@ -1,15 +1,24 @@
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle } from "./styles/GlobalStyle"
 import thema from "./styles/themes/themes"
-import Cabecalho from "./components/Cabecalho"
-import Formulario from "./components/Formulario"
+import AdicionarAmigos from "./pages/AdicionarAmigos"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import PaginBase from "./components/PaginaBase"
+import Sorteio from "./pages/Sorteio"
+
 
 function App() {
   return (
     <ThemeProvider theme={thema}>
       <GlobalStyle />
-      <Cabecalho/>
-      <Formulario/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PaginBase />}>
+            <Route index element={<AdicionarAmigos />} />
+            <Route path="sorteio" element={<Sorteio />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }

@@ -18,6 +18,7 @@ export default [
   {
     rules: {
       "react-in-jsx-scope": "off",
+      indent: ["error", 2],
     },
   },
 ];

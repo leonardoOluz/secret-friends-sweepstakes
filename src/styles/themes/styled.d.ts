@@ -7,6 +7,7 @@ declare module 'styled-components' {
       preto: string,
       laranja: string,
       creme: string,
+      cinzaEscuro: string,
       cinza: string,
       branco: string
     },
