@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import {
+  styleBotaoMobile,
+  styleComponenteMobile,
+} from "../../styles/GlobalStyle";
 
 export const FormAdicionarNomes = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   ul {
     margin-top: 1rem;
   }
@@ -12,15 +17,15 @@ export const FormAdicionarNomes = styled.form`
 export const ContainerForm = styled.div`
   width: 726px;
   display: flex;
-  border-radius: 45px;
+  border-radius: 38px;
   box-shadow: 5px 5px 10px ${(props) => props.theme.colors.preto};
 
   input {
     padding-left: 60px;
     height: 82px;
     width: 70%;
-    border-top-left-radius: 45px;
-    border-bottom-left-radius: 45px;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
     box-sizing: border-box;
     border: 2px solid ${(props) => props.theme.colors.preto};
   }
@@ -44,8 +49,8 @@ export const ContainerForm = styled.div`
     width: 30%;
     font-size: 16px;
     font-weight: 400;
-    border-top-right-radius: 45px;
-    border-bottom-right-radius: 45px;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
     border: 2px solid ${(props) => props.theme.colors.preto};
     font-family: ${(props) => props.theme.fonts.primary};
     background-color: ${(props) => props.theme.colors.cinza};
@@ -63,15 +68,10 @@ export const ContainerForm = styled.div`
     box-shadow: none;
 
     input {
-      width: 95%;
-      max-width: 328px;
-      height: 48px;
+      ${styleComponenteMobile}
       padding-left: 20px;
-      min-width: 328px;
       border-radius: 45px;
       box-sizing: border-box;
-      box-shadow: 3px 3px 10px ${(props) => props.theme.colors.preto};
-      border: 1px solid ${(props) => props.theme.colors.preto};
     }
 
     input::placeholder {
@@ -81,12 +81,69 @@ export const ContainerForm = styled.div`
     }
 
     button {
+      ${styleBotaoMobile}
+    }
+  }
+`;
+
+export const ListaNomes = styled.li`
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 6px;
+  text-align: center;
+`;
+
+export const ContainerDoPlay = styled.div`
+  display: flex;
+  padding-bottom: 32px;
+  gap: 133px;
+
+  button {
+    align-self: center;
+    width: 351px;
+    height: 80px;
+    padding-left: 30px;
+    background-color: ${(props) => props.theme.colors.laranja};
+    border-radius: 45px;
+    background-image: url("./image/play_circle_outline.png");
+    background-repeat: no-repeat;
+    background-position: 35px center;
+    color: ${(props) => props.theme.colors.branco};
+    box-shadow: 5px 5px 10px ${(props) => props.theme.colors.preto};
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: no-drop;
+  }
+
+  button:hover {
+    background-color: ${(props) => props.theme.colors.azul};
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-top: 2em;
+    flex-direction: column;
+    gap: 32px;
+
+    button {
       width: 155px;
-      margin-top: 16px;
-      height: 48px;
-      border: 1px solid ${(props) => props.theme.colors.preto};
-      border-radius: 45px;
-      box-shadow: 3px 3px 10px ${(props) => props.theme.colors.preto};
+      height: 64px;
+      font-size: 16px;
+      background-image: none;
+      text-align: center;
+      padding-left: 0;
+      line-height: 24px;
+    }
+
+    img {
+      width: 127px;
+      padding-left: 17px;
     }
   }
 `;
