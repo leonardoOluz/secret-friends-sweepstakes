@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css } from 'styled-components';
 // import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
 
 export const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean }>`
@@ -51,20 +51,26 @@ html {
 	background-color: ${(props) => props.theme.colors.azul};
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 `;
 
 export const styleComponenteMobile = css`
-  width: 328px;
-  height: 48px;
-  box-shadow: 2px 2px ${(props) => props.theme.colors.preto};
-  border: 1px solid ${(props) => props.theme.colors.preto};
+	width: 328px;
+	height: 48px;
+	box-shadow: 2px 2px ${(props) => props.theme.colors.preto};
+	border: 1px solid ${(props) => props.theme.colors.preto};
 `;
 
 export const styleBotaoMobile = css`
-  width: 155px;
-  margin-top: 16px;
-  height: 48px;
-  border: 1px solid ${(props) => props.theme.colors.preto};
-  border-radius: 38px;
-  box-shadow: 1px 1px ${(props) => props.theme.colors.preto};
+	width: 155px;
+	margin-top: 16px;
+	height: 48px;
+	border: 1px solid ${(props) => props.theme.colors.preto};
+	border-radius: 38px;
+	box-shadow: 1px 1px ${(props) => props.theme.colors.preto};
 `;

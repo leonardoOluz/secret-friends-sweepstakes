@@ -9,7 +9,10 @@ declare module 'styled-components' {
       creme: string,
       cinzaEscuro: string,
       cinza: string,
-      branco: string
+      branco: string,
+      bgColor: string,
+      colorAlert: string,
+      bdColor: string
     },
     fonts: {
       primary: string

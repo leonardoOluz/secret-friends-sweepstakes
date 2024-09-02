@@ -7,6 +7,9 @@ const thema = {
     cinzaEscuro: "#444444",
     cinza: "#C4C4C4",
     branco: "#FFFFFF",
+    bgColor: '#f2dede',
+    colorAlert: "#a94442",
+    bdColor: "#ebccd1"
   },
   fonts: {
     primary: "Poppins, sans-serif",
